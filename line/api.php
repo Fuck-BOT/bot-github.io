@@ -1,4 +1,7 @@
 <?php
+require 'vendor/autoload.php';
+$saori = new hrgruri\saori\Saori(__DIR__);
+$saori->run($argv);
 
 $channel_id = "1468508527";
 $channel_secret = "f2adbda2f69c39f76414791dc58d4279";
@@ -83,3 +86,4 @@ function api_get_user_profile_request($mid) {
     $output = curl_exec($curl);
     return $output;
 }
+
